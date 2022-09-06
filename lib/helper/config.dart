@@ -1,0 +1,4 @@
+class Config{
+  static String coverUrl = "https://scontent.fccu31-1.fna.fbcdn.net/v/t39.30808-6/269816742_2147468478736127_8475800564646886882_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=JF4jcM91hQUAX9F-ria&_nc_ht=scontent.fccu31-1.fna&oh=00_AT8KH6JW1d0bDWv4B3wmJVUSsAE3RJ4_UZmAtRbWt5AHFw&oe=631CE448";
+  static String profileUrl = "https://scontent.fccu31-1.fna.fbcdn.net/v/t39.30808-6/274924324_2197406717075636_2220117218375342994_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JVW0iyE5r6YAX97iFVx&_nc_ht=scontent.fccu31-1.fna&oh=00_AT9ldgyuQ5C5C_ZTMMgf77ZYj5OO8NmBwlukNf5pacIPvw&oe=631BEEC0";
+}
