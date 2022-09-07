@@ -40,7 +40,22 @@ class Home extends StatelessWidget {
 
                     Align(
                       alignment: Alignment.center,
-                      child: MyImage.imageN(url: Config.profileUrl,height: 150.h,width: 150.h,radius: BorderRadius.circular(100.h),),
+                      child: Stack(
+                        children: [
+                          CircleAvatar(radius: 80.h,backgroundColor: Colors.white,child: CircleAvatar(radius: 75.h,child: MyImage.imageN(url: Config.profileUrl,height: 150.h,width: 150.h,radius: BorderRadius.circular(100.h),))),
+                          Positioned(
+                            bottom: 5.h,
+                            right: 15.w,
+                            child: CircleAvatar(backgroundColor: Colors.grey.withOpacity(0.8),child: Icon(Icons.camera_alt,size: 20.h,color: Colors.black,),),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Positioned(
+                     top: 155.h,
+                     right: 15.w,
+                     child: CircleAvatar(backgroundColor: Colors.white,child: Icon(Icons.camera_alt,size: 20.h,color: Colors.black,),),
                     ),
 
                     Align(
@@ -51,7 +66,7 @@ class Home extends StatelessWidget {
                           SizedBox(height: 290.h,),
                           Text("Arup Naskar",style: bold(color: Colors.black, fontSize: 25.sp),),
                           SizedBox(height: 5.h,),
-                          Text("Flutter Developer",style: regular(color: Colors.grey, fontSize: 16.sp),),
+                          Text("Flutter Developer 📱 (Android & Ios)",style: regular(color: Colors.grey, fontSize: 16.sp),),
                           SizedBox(height: 25.h,),
                           FittedBox(
                             child: Row(
@@ -222,7 +237,11 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            Divider(thickness: 20.h,),
+            Container(
+              height: 15.h,
+              width: double.infinity,
+              color: const Color(0xffC9CCD1),
+            ),
 
             SizedBox(height: 15.h,),
 
@@ -269,11 +288,181 @@ class Home extends StatelessWidget {
               ),
             ),
 
-            Divider(thickness: 1.h,),
-            SizedBox(height: 10.h,),
-            Divider(thickness: 20.h,),
+            Divider(thickness: 1.h,height: 0.h,),
+
+            Container(
+              height: 60.h,
+              width: double.infinity,
+              color: Colors.grey.withOpacity(0.1),
+              child: Row(
+                children: [
+                  SizedBox(width: 10.w,),
+                  Chip(
+                    label: Text("Reel",style: regular(fontSize: 14.sp,color: Colors.black),),
+                    avatar: Icon(Icons.movie,size: 18.h,color: Colors.pink,),
+                    padding: EdgeInsets.all(8.h),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(side:BorderSide(color: Colors.grey,width: 1.w),borderRadius: BorderRadius.circular(20.h)),
+                  ),
+                  SizedBox(width: 10.w,),
+                  Chip(
+                    label: Text("Live",style: regular(fontSize: 14.sp,color: Colors.black),),
+                    avatar: Icon(Icons.live_tv,size: 18.h,color: Colors.red,),
+                    padding: EdgeInsets.all(8.h),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(side:BorderSide(color: Colors.grey,width: 1.w),borderRadius: BorderRadius.circular(20.h)),
+                  ),
+                  SizedBox(width: 5.w,),
+                ],
+              ),
+            ),
+
+            Container(
+              height: 10.h,
+              width: double.infinity,
+              color: const Color(0xffC9CCD1),
+            ),
+
+            Container(
+              height: 60.h,
+              width: double.infinity,
+              color: Colors.grey.withOpacity(0.1),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    SizedBox(width: 10.w,),
+                    Chip(
+                      label: Text("Photos",style: regular(fontSize: 14.sp,color: Colors.black),),
+                      avatar: Icon(Icons.photo,size: 18.h,color: Colors.black,),
+                      padding: EdgeInsets.all(8.h),
+                    ),
+                    SizedBox(width: 10.w,),
+                    Chip(
+                      label: Text("Reels",style: regular(fontSize: 14.sp,color: Colors.black),),
+                      avatar: Icon(Icons.live_tv,size: 18.h,color: Colors.black,),
+                      padding: EdgeInsets.all(8.h),
+                    ),
+
+                    SizedBox(width: 10.w,),
+                    Chip(
+                      label: Text("Life events",style: regular(fontSize: 14.sp,color: Colors.black),),
+                      avatar: Icon(Icons.emoji_events,size: 18.h,color: Colors.black,),
+                      padding: EdgeInsets.all(8.h),
+                    ),
+
+                    SizedBox(width: 10.w,),
+                    Chip(
+                      label: Text("Music",style: regular(fontSize: 14.sp,color: Colors.black),),
+                      avatar: Icon(Icons.audiotrack,size: 18.h,color: Colors.black,),
+                      padding: EdgeInsets.all(8.h),
+                    ),
+                    SizedBox(width: 10.w,),
+                  ],
+                ),
+              ),
+            ),
+
+            Container(
+              height: 5.h,
+              width: double.infinity,
+              color: const Color(0xffC9CCD1),
+            ),
 
             SizedBox(height: 10.h,),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    SizedBox(width: 10.w,),
+                    MyImage.imageN(url: Config.profileUrl,height: 30.h,width: 30.h,radius: BorderRadius.circular(30.h),),
+                    SizedBox(width: 10.w,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Arup Naskar",style: bold(fontSize: 14.sp,color: Colors.black),),
+                        Text("5 September at 13:02",style: regular(fontSize: 12.sp,color: Colors.grey),),
+                      ],
+                    ),
+                    const Spacer(),
+                    Container(
+                      height: 30.h,
+                      width: 30.h,
+
+                      decoration: BoxDecoration(
+                        color: const Color(0xffE5E6EB),
+                        borderRadius: BorderRadius.circular(6.h),
+                      ),
+                      child: Icon(Icons.more_horiz,size: 15.h,color: Colors.black,),
+                    ),
+                    SizedBox(width: 10.w,),
+                  ],
+                ),
+
+                Padding(
+                  padding: EdgeInsets.all(10.h),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Mydigigold app promotion Moments.\nThis App Developed by me.",style: regular(fontSize: 14.sp,color: Colors.black),),
+                      Text("#flutter #flutterdeveloper #android #ios",style: regular(fontSize: 14.sp,color: const Color(0xff1876F2)),),
+                    ],
+                  ),
+                ),
+                MyImage.imageN(url: Config.postUrl,height: 200.h,width:double.infinity,fit: BoxFit.fill),
+                Padding(
+                  padding: EdgeInsets.all(10.h),
+                  child: Row(
+                    children: [
+                      Icon(Icons.recommend,size: 18.h,color: Colors.blue,),
+                      Icon(Icons.favorite,size: 18.h,color: Colors.red,),
+                      SizedBox(width: 5.w,),
+                      Text("Raju Das and 11 others",style: regular(fontSize: 14.sp,color: Colors.grey),),
+                      const Spacer(),
+                      Text("1 Comments",style: regular(fontSize: 14.sp,color: Colors.grey),),
+                    ],
+                  ),
+                ),
+
+                Divider(indent: 10.w,endIndent: 10.w,height: 0.h,thickness: 1.h,),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Chip(
+                      label: Text("Like",style: regular(fontSize: 14.sp,color: Colors.grey),),
+                      avatar: Icon(Icons.thumb_up_off_alt,size: 18.h,color: Colors.grey,),
+                      padding: EdgeInsets.all(8.h),
+                      backgroundColor: Colors.transparent,
+                    ),
+                    Chip(
+                      label: Text("Comment",style: regular(fontSize: 14.sp,color: Colors.grey),),
+                      avatar: Icon(Icons.chat_bubble_outline,size: 18.h,color: Colors.grey,),
+                      padding: EdgeInsets.all(8.h),
+                      backgroundColor: Colors.transparent,
+                    ),
+
+                    Chip(
+                      label: Text("Share",style: regular(fontSize: 14.sp,color: Colors.grey),),
+                      avatar: Icon(Icons.share,size: 18.h,color: Colors.grey,),
+                      padding: EdgeInsets.all(8.h),
+                      backgroundColor: Colors.transparent,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+
+            Container(
+              height: 15.h,
+              width: double.infinity,
+              color: const Color(0xffC9CCD1),
+            ),
+
+
+            SizedBox(height: 40.h,),
 
           ],
         ),
